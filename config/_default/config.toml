@@ -1,4 +1,4 @@
 baseURL = "https://notion-blog-2wg.pages.dev/"
 languageCode = "zh-cn"
 title = "My New Hugo Site"
-theme = "hermit-V2"
+theme = "Dolt"

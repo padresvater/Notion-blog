@@ -1,4 +1,4 @@
 baseURL = "https://notion-blog-2wg.pages.dev/"
-languageCode = "en-us"
+languageCode = "zh-ch"
 title = "My New Hugo Site"
 theme = "paper"

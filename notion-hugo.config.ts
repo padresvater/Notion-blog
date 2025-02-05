@@ -1,7 +1,7 @@
 import { UserConfig } from "./src/config"
 
 const userConfig: UserConfig = {
-    base_url: "https://notion-hugo.pages.dev",
+    base_url: "https://notion-blog-2wg.pages.dev/",
     mount: {
         manual: false,
         page_url: 'https://www.notion.so/padresss-d0e/Notion-Hugo-19152bdfd31a80d3bb1cc37b3ced4954?pvs=4',

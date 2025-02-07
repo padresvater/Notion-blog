@@ -1,4 +1,4 @@
 baseURL = "https://notion-blog-2wg.pages.dev/"
 languageCode = "zh-cn"
 title = "Padresvater's Blog"
-theme = "paper"
+theme = "DoIt"

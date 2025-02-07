@@ -112,7 +112,7 @@ theme = "DoIt"
   #  文章页面配置
   [params.page]
     #  是否在主页隐藏文章
-    hiddenFromHomePage = false 
+    hiddenFromHomePage = true
     #  是否在搜索结果中隐藏文章
     hiddenFromSearch = false
     #  是否使用 twemoji
@@ -227,14 +227,10 @@ theme = "DoIt"
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 15
+# 用于分类的设置
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"
+series = "series"
+  

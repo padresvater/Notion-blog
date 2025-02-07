@@ -2,3 +2,47 @@ baseURL = "https://notion-blog-2wg.pages.dev/"
 languageCode = "zh-cn"
 title = "Padresvater's Blog"
 theme = "DoIt"
+
+[params]
+  defaultTheme = "auto"
+  ShowShareButtons = true
+  ShowToc = true
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  
+  # 添加搜索功能配置
+  ShowSearchButton = true
+  
+  # 添加评论功能配置
+  comments = true
+  
+  # Favicon 设置
+  [params.assets]
+    favicon = "/img/favicon.ico"
+    apple_touch_icon = "/img/apple-touch-icon.png"
+  
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"] # 添加 JSON 输出，用于搜索功能
+
+[menu]
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 5
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 15
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30

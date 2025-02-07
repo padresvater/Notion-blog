@@ -112,12 +112,12 @@ theme = "DoIt"
       paginate = 6
       #  被 params.page 中的 hiddenFromHomePage 替代
       # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
-      defaultHiddenFromHomePage = true
+      defaultHiddenFromHomePage = false
 
   #  文章页面配置
   [params.page]
     #  是否在主页隐藏一篇文章
-    hiddenFromHomePage = true
+    hiddenFromHomePage = false 
     #  是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
     #  是否使用 twemoji

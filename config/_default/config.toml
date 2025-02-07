@@ -8,11 +8,6 @@ theme = "DoIt"
   version = "0.3.X"
   #  网站默认主题样式 ("light", "dark", "black", "auto")
   defaultTheme = "auto"
-  #  哪种哈希函数用来 SRI, 为空时表示不使用 SRI
-  # ("sha256", "sha384", "sha512", "md5")
-  fingerprint = ""
-  #  日期格式
-  dateFormat = "2006-01-02"
   # 作者配置
   [params.author]
     name = "Padresvater"
@@ -110,27 +105,6 @@ theme = "DoIt"
   [params.home]
     #  RSS 文章数目
     rss = 10
-    # 主页个人信息
-    [params.home.profile]
-      enable = true
-      # Gravatar 邮箱, 用于优先在主页显示的头像
-      gravatarEmail = ""
-      # 主页显示头像的 URL
-      # 将你的头像文件放置于 static 或者 assets 目录下
-      # 文件路径是相对于 static 或者 assets 目录的
-      avatarURL = "/images/avatar.webp"
-      # 头像的链接指向的 URL
-      avatarLinkURL = ""
-      #  主页显示的网站标题 (支持 HTML 格式)
-      title = ""
-      # 主页显示的网站副标题
-      subtitle = "这是我的全新 Hugo 网站"
-      # 是否为副标题显示打字机动画
-      typeit = true
-      # 是否显示社交账号
-      social = true
-      #  免责声明 (支持 HTML 格式)
-      disclaimer = ""
     # 主页文章列表
     [params.home.posts]
       enable = true
@@ -138,52 +112,18 @@ theme = "DoIt"
       paginate = 6
       #  被 params.page 中的 hiddenFromHomePage 替代
       # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
-      defaultHiddenFromHomePage = false
+      defaultHiddenFromHomePage = true
 
   #  文章页面配置
   [params.page]
     #  是否在主页隐藏一篇文章
-    hiddenFromHomePage = false
+    hiddenFromHomePage = true
     #  是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
     #  是否使用 twemoji
     twemoji = false
     # 是否使用 lightgallery
     lightgallery = false
-    #  是否使用 ruby 扩展语法
-    ruby = true
-    #  是否使用 fraction 扩展语法
-    fraction = true
-    # 是否在文章页面显示原始 Markdown 文档链接
-    linkToMarkdown = true
-    #  配置文章原始文件的链接
-    linkToSource = false
-    # "https://github.com/user/repo/blob/main/{path}"
-    #  配置编辑文章的链接
-    linkToEdit = false
-    # "https://github.com/user/repo/edit/main/{path}"
-    # "https://gitlab.com/user/repo/-/edit/main/{path}"
-    # "https://bitbucket.org/user/repo/src/main/{path}?mode=edit"
-    #  配置提交错误的链接
-    linkToReport = false
-    # "https://github.com/user/repo/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/user/repo/blob/main/{path}|"
-    #  是否在 RSS 中显示全文内容
-    rssFullText = false
-    #  是否在文章开头显示系列导航
-    seriesNavigation = true
-    # 是否启用最后修改时间
-    enableLastMod = true
-    # 是否启用字数统计
-    enableWordCount = true
-    # 是否启用阅读时间估计
-    enableReadingTime = true
-    #  过时文章提示
-    [params.page.outdatedArticleReminder]
-      enable = true
-      # 如果文章最后更新于 90 天之前，显示提醒
-      reminder = 90
-      # 如果文章最后更新于 180 天之前，显示警告
-      warning = 180
     #  目录配置
     [params.page.toc]
       # 是否使用目录
@@ -244,159 +184,6 @@ theme = "DoIt"
       Linkedin = true
       Weibo = true
 
-
-    # instant.page 设置
-    [params.page.instantpage]
-      enable = false
-
-    #  评论系统设置
-    [params.page.comment]
-      enable = true
-      # Disqus 评论系统设置
-      [params.page.comment.disqus]
-        # 
-        enable = false
-        # Disqus 的 shortname, 用来在文章中启用 Disqus 评论系统
-        shortname = ""
-      # Gitalk 评论系统设置
-      [params.page.comment.gitalk]
-        # 
-        enable = false
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      # Valine 评论系统设置
-      [params.page.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
-        placeholder = ""
-        avatar = "mp"
-        meta= ""
-        pageSize = 10
-        lang = ""
-        visitor = true
-        recordIP = true
-        highlight = true
-        enableQQ = false
-        serverURLs = ""
-        #  emoji 数据文件名称, 默认是 "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # 位于 "themes/DoIt/assets/data/emoji/" 目录
-        # 可以在你的项目下相同路径存放你自己的数据文件:
-        # "assets/data/emoji/"
-        emoji = ""
-      # Waline 评论系统设置
-      [params.page.comment.waline]
-        # 
-        enable = false
-        serverURL = ""
-        pageview = true
-        comment = true
-        # emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
-        # meta = ['nick', 'mail', 'link']
-        # requiredMeta = []
-        # login = 'enable'
-        # wordLimit = 0
-        # pageSize = 10
-        # imageUploader = false
-        # highlighter = false
-        # texRenderer = false
-      # Facebook 评论系统设置
-      [params.page.comment.facebook]
-        enable = false
-        width = "100%"
-        numPosts = 10
-        appId = ""
-        languageCode = "zh_CN"
-      #  Telegram Comments 评论系统设置
-      [params.page.comment.telegram]
-        enable = false
-        siteID = ""
-        limit = 5
-        height = ""
-        color = ""
-        colorful = true
-        dislikes = false
-        outlined = false
-        dark = false
-      #  Commento 评论系统设置
-      [params.page.comment.commento]
-        enable = false
-      #  Utterances 评论系统设置
-      [params.page.comment.utterances]
-        enable = false
-        # owner/repo
-        repo = ""
-        issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
-      #  Twikoo 评论系统设置
-      [params.page.comment.twikoo]
-        enable = false
-        envId = ""
-        region = ""
-        path = ""
-        cloudbase = true # boolean : true / false. # 是否部署在腾讯云 CloudBase
-        visitor = true
-        commentCount = true
-      #  Vssue 评论系统设置
-      [params.page.comment.vssue]
-        enable = false
-        platform = "" # ("bitbucket", "gitea", "gitee", "github", "gitlab")
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      #  Remark42 评论系统设置
-      [params.page.comment.remark42]
-        enable = false
-        host = ""
-        site_id = ""
-        max_shown_comments = 15
-        show_email_subscription = true
-        simple_view = false
-      #  giscus 评论系统设置
-      [params.page.comment.giscus]
-        enable = false
-        # owner/repo
-        dataRepo = ""
-        dataRepoId = ""
-        dataCategory = ""
-        dataCategoryId = ""
-        dataMapping = "pathname"
-        dataReactionsEnabled = "1"
-        dataEmitMetadata = "0"
-        dataInputPosition = "bottom"
-        lightTheme = "light"
-        darkTheme = "dark"
-        dataLang = "zh-CN"
-        dataLoading = "lazy"
-      # artalk 评论系统设置
-      [params.page.comment.artalk]
-        enable = false
-        server = ""
-        site = ""
-        lite = false
-        katex = false
-        lightbox = false
-        pageview = true
-        commentCount = true
-
-
-  #  TypeIt 配置
-  [params.typeit]
-    # 每一步的打字速度 (单位是毫秒)
-    speed = 100
-    # 光标的闪烁速度 (单位是毫秒)
-    cursorSpeed = 1000
-    # 光标的字符 (支持 HTML 格式)
-    cursorChar = "|"
-    # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
-    duration = -1
-
 # Hugo 解析文档的配置
 [markup]
   # 语法高亮设置
@@ -426,12 +213,6 @@ theme = "DoIt"
     startLevel = 2
     endLevel = 6
 
-# 网站地图配置
-[sitemap]
-  changefreq = "weekly"
-  filename = "sitemap.xml"
-  priority = 0.5
-
 # 用于输出 Markdown 格式文档的设置
 [mediaTypes]
   [mediaTypes."text/plain"]
@@ -450,3 +231,15 @@ theme = "DoIt"
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 15

@@ -9,16 +9,20 @@
     {{ partial "icons/icon" (dict
     "path" "icons/post/author.svg"
     ) }}
-    {{- $author_id := .Params.author | default "" -}}
-    {{ if $author_id }}
-      {{ $authors := $.Site.Data.authors | default dict }}
-      {{ with index $authors $author_id }}
-        <!-- 渲染作者信息 -->
-        <span class="post-author">{{ .name }}</span>
-      {{ end }}
+    {{- $author_id := .Params.author | default .Site.Params.author.name | default .Site.Author.name -}}
+    {{- $author := (index ($.Site.Data.authors | default dict) $author_id) -}}
+    {{- $author_lang := (index ($author | default dict) .Site.Language.Lang) -}}
+    {{- $author_name := $author_lang.name.display | default $author.name.display | default $author_id -}}
+    {{- $author_url := $author_lang.url | default $author.url | default .Site.Params.author.url | default
+    .Site.Author.url -}}
+    {{ if $author_url }}
+    <a href="{{ $author_url | relLangURL | safeURL }}">
+      <span class="post-meta-author-name">
+        {{ $author_name | safeHTML }}
+      </span>
+    </a>
     {{ else }}
-      <!-- 没有指定作者时可选择不展示或者展示默认内容 -->
-      <span class="post-author">未知作者</span>
+    {{ $author_name | safeHTML }}
     {{ end }}
   </div>
 

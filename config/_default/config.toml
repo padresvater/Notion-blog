@@ -64,11 +64,6 @@ theme = "DoIt"
     enable = true
     #  自定义内容 (支持 HTML 格式)
     custom = ''
-    #  是否显示 Hugo 和主题信息
-    hugo = true
-    #  托管服务信息 (支持 HTML 格式)
-    # <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a>
-    hostedOn = ''
     #  是否显示版权信息
     copyright = true
     #  是否显示作者
@@ -116,9 +111,9 @@ theme = "DoIt"
 
   #  文章页面配置
   [params.page]
-    #  是否在主页隐藏一篇文章
+    #  是否在主页隐藏文章
     hiddenFromHomePage = false 
-    #  是否在搜索结果中隐藏一篇文章
+    #  是否在搜索结果中隐藏文章
     hiddenFromSearch = false
     #  是否使用 twemoji
     twemoji = false

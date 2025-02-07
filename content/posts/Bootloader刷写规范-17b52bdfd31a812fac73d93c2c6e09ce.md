@@ -1,22 +1,22 @@
 ---
 title: "Bootloader刷写规范"
 date: "2025-01-14T05:41:00.000Z"
-lastmod: "2025-02-06T07:02:00.000Z"
-draft: true
+lastmod: "2025-02-06T07:45:00.000Z"
+draft: false
 featuredImage: "https://www.notion.so/images/page-cover/met_william_morris_1878.jpg"
 series: []
+authors:
+  - "Padresvater"
 tags:
   - "汽车"
   - "刷写"
 categories:
   - "汽车电子"
-authors:
-  - "Drennon Margie"
 NOTION_METADATA:
   object: "page"
   id: "17b52bdf-d31a-812f-ac73-d93c2c6e09ce"
   created_time: "2025-01-14T05:41:00.000Z"
-  last_edited_time: "2025-02-06T07:02:00.000Z"
+  last_edited_time: "2025-02-06T07:45:00.000Z"
   created_by:
     object: "user"
     id: "178d872b-594c-8172-aca1-00024d90b8f5"
@@ -43,11 +43,18 @@ NOTION_METADATA:
     draft:
       id: "JiWU"
       type: "checkbox"
-      checkbox: true
+      checkbox: false
     authors:
       id: "bK%3B%5B"
       type: "people"
-      people: []
+      people:
+        - object: "user"
+          id: "178d872b-594c-8172-aca1-00024d90b8f5"
+          name: "Padresvater"
+          avatar_url: null
+          type: "person"
+          person:
+            email: "margie.drennon.795@my.csun.edu"
     custom-front-matter:
       id: "c~kA"
       type: "rich_text"
@@ -72,7 +79,7 @@ NOTION_METADATA:
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2025-02-06T07:02:00.000Z"
+      last_edited_time: "2025-02-06T07:45:00.000Z"
     summary:
       id: "x%3AlD"
       type: "rich_text"

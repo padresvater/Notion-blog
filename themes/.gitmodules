@@ -1,0 +1,6 @@
+[submodule "Notion-blog"]
+	path = Notion-blog
+	url = git@github.com:padresvater/Notion-blog.git
+[submodule "hugo-theme-jane"]
+	path = hugo-theme-jane
+	url = git@github.com:xianmin/hugo-theme-jane.git

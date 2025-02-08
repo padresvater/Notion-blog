@@ -101,18 +101,34 @@ theme = "DoIt"
     #  RSS 文章数目
     rss = 10
     # 主页文章列表
+    [params.home.profile]
+      enable = true
+      # Gravatar 邮箱, 用于优先在主页显示的头像
+      gravatarEmail = "padresss512@gmail.com"
+      # 主页显示头像的 URL
+      # 将你的头像文件放置于 static 或者 assets 目录下
+      # 文件路径是相对于 static 或者 assets 目录的
+      avatarURL = "/images/avatar.webp"
+      # 头像的链接指向的 URL
+      avatarLinkURL = ""
+      # DoIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
+      title = ""
+      # 主页显示的网站副标题
+      subtitle = "This is my Blog Site"
+      # 是否为副标题显示打字机动画
+      typeit = true
+      # 是否显示社交账号
+      social = true
+
     [params.home.posts]
       enable = true
       # 主页每页显示文章数量
-      paginate = 6
-      #  被 params.page 中的 hiddenFromHomePage 替代
-      # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
-      defaultHiddenFromHomePage = false
+      paginate = 1
 
   #  文章页面配置
   [params.page]
     #  是否在主页隐藏文章
-    hiddenFromHomePage = true
+    hiddenFromHomePage = false
     #  是否在搜索结果中隐藏文章
     hiddenFromSearch = false
     #  是否使用 twemoji
@@ -239,7 +255,7 @@ series = "series"
     identifier = "posts"
     name = "Posts"
     url = "/posts/"
-    weight = 10
+    weight = 20
   [[menu.main]]
     identifier = "tags"
     name = "Tags"

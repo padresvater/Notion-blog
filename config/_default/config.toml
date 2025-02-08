@@ -105,12 +105,6 @@ theme = "DoIt"
       enable = true
       # Gravatar 邮箱, 用于优先在主页显示的头像
       gravatarEmail = "padresss512@gmail.com"
-      # 主页显示头像的 URL
-      # 将你的头像文件放置于 static 或者 assets 目录下
-      # 文件路径是相对于 static 或者 assets 目录的
-      avatarURL = "/images/avatar.webp"
-      # 头像的链接指向的 URL
-      avatarLinkURL = ""
       # DoIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # 主页显示的网站副标题

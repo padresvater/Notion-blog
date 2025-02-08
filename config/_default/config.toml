@@ -255,7 +255,7 @@ series = "series"
     identifier = "posts"
     name = "Posts"
     url = "/posts/"
-    weight = 20
+    weight = 10
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
